@@ -3,6 +3,7 @@ using System.Collections;
 
 public class SwitchController : MonoBehaviour {
 
+
 	// switchOff reflects whether the switch is on ot off
 	private bool switchOff = true;
 
@@ -52,4 +53,12 @@ public class SwitchController : MonoBehaviour {
 			Debug.Log ("Can't toggle switch as it's not enabled");
 		}
 	}
+
+    public void turnOnBulb()
+    {
+        if (switchOff == true)
+        {
+
+        }
+    }
 }
