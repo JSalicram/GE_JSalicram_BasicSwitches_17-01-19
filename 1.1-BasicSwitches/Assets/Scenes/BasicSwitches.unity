@@ -229,6 +229,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012798605556, guid: 5b90eedc85ff68c43a8192be8d705e94,
+        type: 2}
+      propertyPath: bulbController
+      value: 
+      objectReference: {fileID: 320800092}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b90eedc85ff68c43a8192be8d705e94, type: 2}
   m_IsPrefabAsset: 0
@@ -241,8 +246,8 @@ GameObject:
   m_Component:
   - component: {fileID: 320800095}
   - component: {fileID: 320800094}
-  - component: {fileID: 320800093}
   - component: {fileID: 320800092}
+  - component: {fileID: 320800093}
   m_Layer: 0
   m_Name: Bulb
   m_TagString: Untagged
@@ -270,7 +275,7 @@ Animator:
   m_GameObject: {fileID: 320800091}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5b7abe86322e78541bcaf3fe55fb1174, type: 2}
+  m_Controller: {fileID: 9100000, guid: f6465454369138747801e2d781bb826f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -387,6 +392,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012798605556, guid: fe173259e959c2146a0778494aa82f2d,
+        type: 2}
+      propertyPath: bulbController
+      value: 
+      objectReference: {fileID: 320800092}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe173259e959c2146a0778494aa82f2d, type: 2}
   m_IsPrefabAsset: 0

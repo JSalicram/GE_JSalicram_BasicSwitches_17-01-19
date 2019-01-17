@@ -2,8 +2,6 @@
 using System.Collections;
 
 public class SwitchController : MonoBehaviour {
-
-
 	// switchOff reflects whether the switch is on ot off
 	private bool switchOff = true;
 
@@ -13,6 +11,8 @@ public class SwitchController : MonoBehaviour {
 
 	// switchAnimator will hold the gameobjects Animator
 	private Animator switchAnimator;
+
+    public BulbController bulbController;
 
 	// The Awake function of each class is called before the Start function. It is
 	// here you should initialise class properties/variables like those above.
@@ -54,11 +54,16 @@ public class SwitchController : MonoBehaviour {
 		}
 	}
 
-    public void turnOnBulb()
+    public void Update()
     {
         if (switchOff == true)
         {
+            bulbController.turnOn();
+        }
 
+        if (switchOff == false)
+        {
+            bulbController.turnOff();
         }
     }
 }

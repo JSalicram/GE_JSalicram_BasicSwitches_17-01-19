@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class BulbController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    private Animator bulbAnimator;
+
+    public void Awake()
+    {
+        bulbAnimator = gameObject.GetComponent<Animator>();
+
+        turnOff();
+    }
+
+    public void turnOn()
+    {
+        bulbAnimator.SetBool("BulbOff", false);
+    }
+
+    public void turnOff()
+    {
+        bulbAnimator.SetBool("BulbOff", true);
+    }
 }
