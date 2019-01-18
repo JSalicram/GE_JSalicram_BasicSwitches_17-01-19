@@ -28,12 +28,14 @@ public class SwitchController : MonoBehaviour {
 	public void turnOn() {
 		switchOff = false;
 		switchAnimator.SetBool("SwitchOff", switchOff);
-	}
+        bulbController.turnOn();
+    }
 
 	public void turnOff() {
 		switchOff = true;
 		switchAnimator.SetBool("SwitchOff", switchOff);
-	}
+        bulbController.turnOff();
+    }
 
 	public void enableSwitch() {
 		switchEnabled = true;
@@ -47,23 +49,21 @@ public class SwitchController : MonoBehaviour {
 	// switch is enabled
 	public void toggleSwitch() {
 		if (switchEnabled == true) {
-			switchOff = !switchOff;
+            switchOff = !switchOff;
 			switchAnimator.SetBool ("SwitchOff", switchOff);
-		} else {
+
+            if (switchOff == false)
+            {
+                bulbController.turnOn();
+            }
+
+            if (switchOff == true)
+            {
+                bulbController.turnOff();
+            }
+
+        } else {
 			Debug.Log ("Can't toggle switch as it's not enabled");
 		}
 	}
-
-    public void Update()
-    {
-        if (switchOff == true)
-        {
-            bulbController.turnOn();
-        }
-
-        if (switchOff == false)
-        {
-            bulbController.turnOff();
-        }
-    }
 }

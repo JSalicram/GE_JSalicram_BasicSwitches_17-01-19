@@ -6,13 +6,13 @@ public class ManualSwitchTriggerController : MonoBehaviour {
 	public SwitchController theSwitch;
 
 	void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("Someone entered the switch trigger");
+		Debug.Log ("Someone entered the manual switch trigger");
 
 		theSwitch.enableSwitch ();
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		Debug.Log ("Someone left the switch trigger");
+		Debug.Log ("Someone left the manual switch trigger");
 
 		theSwitch.disableSwitch ();
 	}

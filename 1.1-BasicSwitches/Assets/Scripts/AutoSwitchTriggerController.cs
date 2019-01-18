@@ -6,13 +6,13 @@ public class AutoSwitchTriggerController : MonoBehaviour {
 	public SwitchController theSwitch;
 
     void OnTriggerEnter2D(Collider2D other) {
-		Debug.Log ("Someone entered the switch trigger");
+		Debug.Log ("Someone entered the auto switch trigger");
 
 		theSwitch.turnOn ();
 	}
 
 	void OnTriggerExit2D(Collider2D other) {
-		Debug.Log ("Someone left the switch trigger");
+		Debug.Log ("Someone left the auto switch trigger");
 
 		theSwitch.turnOff ();
 	}
